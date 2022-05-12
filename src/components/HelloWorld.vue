@@ -37,6 +37,9 @@ export default {
   props: {
     msg: String
   },
+  mounted() {
+    // var t = 3
+  },
 }
 </script>
 
