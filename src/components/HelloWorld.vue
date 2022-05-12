@@ -38,7 +38,7 @@ export default {
     msg: String
   },
   mounted() {
-    // var t = 3
+    var t = 3
   },
 }
 </script>
