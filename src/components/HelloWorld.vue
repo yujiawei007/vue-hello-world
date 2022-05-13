@@ -28,14 +28,14 @@
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
     <!-- <img src="../assets/123.jpeg" alt=""> -->
-    <div id="box"></div>
-    <br/>
-    <img :src="`${publicPath}car.png`" alt="">
-    <img :src="`${publicPath}./imgs/hh.jpeg`" alt="">
+    <!-- <div id="box"></div>
+    <br/> -->
+    <!-- <img :src="`${publicPath}car.png`" alt="">
+    <img :src="`${publicPath}./imgs/hh.jpeg`" alt=""> -->
     <br/>
     <!-- <img src="/hh.jpeg" alt=""> -->
     <br/>
-    <img src="@/assets/logo.png" alt="">
+    <img src="@/assets/daughter.jpg" alt="">
     <br/>
   </div>
 </template>
