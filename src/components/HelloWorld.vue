@@ -19,7 +19,7 @@
       <li><a href="https://twitter.com/vuejs" target="_blank" rel="noopener">Twitter</a></li>
       <li><a href="https://news.vuejs.org" target="_blank" rel="noopener">News</a></li>
     </ul>
-    <h3>Ecosystemshshs</h3>
+    <h3 :class="$style.str">Ecosystemshshs</h3>
     <ul>
       <li><a href="https://router.vuejs.org" target="_blank" rel="noopener">vue-router</a></li>
       <li><a href="https://vuex.vuejs.org" target="_blank" rel="noopener">vuex</a></li>
@@ -27,6 +27,16 @@
       <li><a href="https://vue-loader.vuejs.org" target="_blank" rel="noopener">vue-loader</a></li>
       <li><a href="https://github.com/vuejs/awesome-vue" target="_blank" rel="noopener">awesome-vue</a></li>
     </ul>
+    <!-- <img src="../assets/123.jpeg" alt=""> -->
+    <div id="box"></div>
+    <br/>
+    <img :src="`${publicPath}car.png`" alt="">
+    <img :src="`${publicPath}./imgs/hh.jpeg`" alt="">
+    <br/>
+    <!-- <img src="/hh.jpeg" alt=""> -->
+    <br/>
+    <img src="@/assets/logo.png" alt="">
+    <br/>
   </div>
 </template>
 
@@ -36,14 +46,29 @@ export default {
   props: {
     msg: String
   },
+  data() {
+    return {
+      publicPath: process.env.BASE_URL
+    }
+  },
   mounted() {
-    console.log(666)
+    // console.log(this.publicPath, 'publicPath')
+    console.log(this.$style, 'this.$style')
   },
 }
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style scoped>
+<style module>
+#box {
+  width: 300px;
+  height: 300px;
+  background: url('../assets/123.jpeg') no-repeat;
+  background-size: contain;
+}
+.str {
+  color: hotpink;
+}
 h3 {
   margin: 40px 0 0;
 }
@@ -55,7 +80,7 @@ li {
   display: inline-block;
   margin: 0 10px;
 }
-a {
-  color: #42b983;
-}
+/* a {
+  color: @lesscolor;
+} */
 </style>
