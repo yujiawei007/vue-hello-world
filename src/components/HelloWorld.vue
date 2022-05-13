@@ -35,7 +35,7 @@
     <br/>
     <!-- <img src="/hh.jpeg" alt=""> -->
     <br/>
-    <img src="@/assets/daughter.jpg" alt="">
+    <img src="@/assets/daughter.jpg" :width="imgWidth" alt="">
     <br/>
   </div>
 </template>
@@ -48,12 +48,14 @@ export default {
   },
   data() {
     return {
-      publicPath: process.env.BASE_URL
+      publicPath: process.env.BASE_URL,
+      imgWidth: 750
     }
   },
   mounted() {
     // console.log(this.publicPath, 'publicPath')
     console.log(this.$style, 'this.$style')
+    this.imgWidth = document.documentElement.clientWidth * .8
   },
 }
 </script>
